@@ -334,8 +334,10 @@ class Ezame(object):
 			else: self.deskstore[self.desktree.get_cursor()[0]][0] = Entry.getName()
 			if self.deskstore[self.desktree.get_cursor()[0]][0] == "": self.deskstore[self.desktree.get_cursor()[0]][0] = Entry.getName() # for new entries that don't have registered DesktopFileID
 		except: pass
-		self.deskstore[self.desktree.get_cursor()[0]][2] = self.load_icon(Entry.getIcon())
-		self.deskstore[self.desktree.get_cursor()[0]][6] = not self.Snodisplay.get_active()
+		try: self.deskstore[self.desktree.get_cursor()[0]][2] = self.load_icon(Entry.getIcon())
+		except: pass
+		try: self.deskstore[self.desktree.get_cursor()[0]][6] = not self.Snodisplay.get_active()
+		except: pass
 		self.Eexec.set_text(Entry.getExec())
 		self.Epath.set_text(Entry.getPath())
 		self.Eicon.set_text(Entry.getIcon())
@@ -375,7 +377,7 @@ class Ezame(object):
 		self.Estartupwmclass.set_text(Entry.getStartupWMClass())
 		if update_editor:
 			self.desktop_buffer.set_text(self.entry_text())
-			self.text_format()
+			#self.text_format()
 		if update_actions:
 			for child in self.Nactions.get_children(): self.Nactions.remove(child)
 			for (group, content) in self.Entry.content.items():
@@ -402,7 +404,7 @@ class Ezame(object):
 		Eaexec.set_text(self.Entry.get("Exec", group))
 		self.id_Eaexec_changed = Eaexec.connect("changed", self.on_Entry_changed)
 		Baexec = Gtk.Button(stock = "gtk-open")
-		Baexec.set_always_show_image(True)
+		if python3: Baexec.set_always_show_image(True)
 		Baexec.msg = _("Choose a file")
 		Baexec.action = Gtk.FileChooserAction.OPEN
 		Baexec.entry = Eaexec
@@ -418,7 +420,7 @@ class Ezame(object):
 		Eaicon.set_text(self.Entry.get("Icon", group))
 		self.id_Eaicon_changed = Eaicon.connect("changed", self.on_Entry_changed)
 		Baicon = Gtk.Button(stock = "gtk-open")
-		Baicon.set_always_show_image(True)
+		if python3: Baicon.set_always_show_image(True)
 		Baicon.msg = _("Choose a file")
 		Baicon.action = Gtk.FileChooserAction.OPEN
 		Baicon.entry = Eaicon
@@ -714,19 +716,19 @@ class Ezame(object):
 		self.Ronlyshowin.set_active(True)
 		for de in self.destore: de[0] = False
 
-	def text_format(self):
-		def search_and_mark(text, tag, start):
-			end = self.desktop_buffer.get_end_iter()
-			match = start.forward_search(text, 0, end)
-			if match != None:
-				match_start, match_end = match
-				self.desktop_buffer.apply_tag(tag, match_start, match_end)
-				search_and_mark(text, tag, match_end)
+	#def text_format(self):
+		#def search_and_mark(text, tag, start):
+			#end = self.desktop_buffer.get_end_iter()
+			#match = start.forward_search(text, 0, end)
+			#if match != None:
+				#match_start, match_end = match
+				#self.desktop_buffer.apply_tag(tag, match_start, match_end)
+				#search_and_mark(text, tag, match_end)
 
-		keywords_list = ["[Desktop Entry]", "Type=", "Name=", "Icon=", "MimeType=", "Exec=", "TryExec=", "NoDisplay=", "Actions=", "StartupNotify=", "Encoding=", "Comment=", "Categories=", "StartupWMClass=", "Terminal=", "GenericName=", "Path=", "Version=", "OnlyShowIn=", "NotShowIn=", "Keywords="]
-		search_and_mark(";", self.tag_red, self.desktop_buffer.get_start_iter())
-		for word in keywords_list:
-			search_and_mark(word, self.tag_bold, self.desktop_buffer.get_start_iter())
+		#keywords_list = ["[Desktop Entry]", "Type=", "Name=", "Icon=", "MimeType=", "Exec=", "TryExec=", "NoDisplay=", "Actions=", "StartupNotify=", "Encoding=", "Comment=", "Categories=", "StartupWMClass=", "Terminal=", "GenericName=", "Path=", "Version=", "OnlyShowIn=", "NotShowIn=", "Keywords="]
+		#search_and_mark(";", self.tag_red, self.desktop_buffer.get_start_iter())
+		#for word in keywords_list:
+			#search_and_mark(word, self.tag_bold, self.desktop_buffer.get_start_iter())
 		
 	def change_tree(self, action):
 		def iterate(treeiter, filename, action):
@@ -757,11 +759,8 @@ class Ezame(object):
 		if self.default_theme.lookup_icon(icon, self.icon_size, 0):
 			pixbuf = self.default_theme.load_icon(icon, self.icon_size, 0).scale_simple(self.icon_size, self.icon_size, GdkPixbuf.InterpType.BILINEAR)
 		else:
-			try:
-				pixbuf = GdkPixbuf.Pixbuf.new_from_file(getIconPath(icon)).scale_simple(self.icon_size, self.icon_size, GdkPixbuf.InterpType.BILINEAR)
-			except:
-				pixbuf = None
-				#pass
+			try: pixbuf = GdkPixbuf.Pixbuf.new_from_file(getIconPath(icon)).scale_simple(self.icon_size, self.icon_size, GdkPixbuf.InterpType.BILINEAR)
+			except: pixbuf = None
 		return pixbuf
 
 	def load_menu(self):
