@@ -23,18 +23,16 @@ msgid "About Ezame"
 msgstr "Sobre Ezame"
 
 #: ezame.glade:113
-#, fuzzy
 msgid "Action"
-msgstr "Aplicação"
+msgstr "Ação"
 
 #: ezame.glade:1766
-#, fuzzy
 msgid "Actions"
-msgstr "Aplicação"
+msgstr "Ações"
 
 #: __main__.py:124
 msgid "Any files"
-msgstr ""
+msgstr "Todos os ficheiros"
 
 #: ezame.glade:783 __main__.py:180
 msgid "Application"
@@ -175,7 +173,7 @@ msgstr ""
 
 #: __main__.py:120
 msgid "Image files"
-msgstr ""
+msgstr "Ficheiros de imagem"
 
 #: ezame.glade:1640
 msgid "Keywords"
