@@ -1,0 +1,345 @@
+# Portuguese translations for ezame package
+# Traduções portuguesas para o pacote ezame.
+# Copyright (C) 2013 Caldas Lopes
+# This file is distributed under the same license as the ezame package.
+# Automatically generated, 2013.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ezame\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-06-18 00:04+0100\n"
+"PO-Revision-Date: 2013-05-31 00:33+0100\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ezame.glade:7
+msgid "About Ezame"
+msgstr "Sobre Ezame"
+
+#: ezame.glade:113
+#, fuzzy
+msgid "Action"
+msgstr "Aplicação"
+
+#: ezame.glade:1766
+#, fuzzy
+msgid "Actions"
+msgstr "Aplicação"
+
+#: __main__.py:124
+msgid "Any files"
+msgstr ""
+
+#: ezame.glade:783 __main__.py:180
+msgid "Application"
+msgstr "Aplicação"
+
+#: ezame.glade:1279
+msgid "Categories"
+msgstr "Categorias"
+
+#: __main__.py:406 __main__.py:422 __main__.py:497 __main__.py:526
+msgid "Choose a file"
+msgstr "Escolha um ficheiro"
+
+#: __main__.py:501
+msgid "Choose a folder"
+msgstr "Escolha uma pasta"
+
+#: __main__.py:505
+msgid "Choose a icon"
+msgstr "Escolha um ícon"
+
+#: ezame.glade:393
+msgid "Cinnamon"
+msgstr ""
+
+#: ezame.glade:376
+msgid "Classic"
+msgstr "Clássico"
+
+#: ezame.glade:936
+msgid "Comment"
+msgstr "Comentário"
+
+#: ezame.glade:15
+msgid "Copyright © 2013 Caldas Lopes"
+msgstr ""
+
+#: ezame.glade:463
+msgid "Desktop"
+msgstr "Área de Trabalho"
+
+#: ezame.glade:812
+msgid "Display"
+msgstr "Exibir"
+
+#: ezame.glade:655
+msgid "Edit"
+msgstr "Editar"
+
+#: ezame.glade:1793
+msgid "Editor"
+msgstr ""
+
+#: ezame.glade:993 __main__.py:389
+msgid "Exec"
+msgstr ""
+
+#: ezame.glade:16
+msgid "Eza's Menu Editor"
+msgstr ""
+
+#: ezame.glade:559
+msgid "Ezame"
+msgstr ""
+
+#: ezame.glade:578
+msgid "File"
+msgstr "Ficheiro"
+
+#: ezame.glade:220 ezame.glade:1189
+msgid "Filename"
+msgstr "Ficheiro"
+
+#: ezame.glade:891
+msgid "Generic Name"
+msgstr "Nome Genérico"
+
+#: ezame.glade:889
+msgid "Generic name of the application, for example \"Word Processor\"."
+msgstr "Nome genérico da aplicação, por exemplo \"Processador de Texto\"."
+
+#: ezame.glade:726
+msgid "Help"
+msgstr "Ajuda"
+
+#: ezame.glade:1554
+msgid "Hidden"
+msgstr "Escondido"
+
+#: ezame.glade:1552
+msgid ""
+"Hidden should have been called Deleted. It means the user deleted (at his "
+"level) something that was present (at an upper level, e.g. in the system "
+"dirs)."
+msgstr ""
+"Escondido devia ter sido chamado Apagado. Significa que o utilizador apagou "
+"(ao seu nível) algo que estava presente (a um nível superior, p. ex. nas "
+"pastas do sistema"
+
+#: ezame.glade:951 __main__.py:390
+msgid "Icon"
+msgstr "Ícon"
+
+#: ezame.glade:949
+msgid "Icon to display in file manager, menus, etc."
+msgstr "Ícon a exibir no gestor de ficheiros, menús, etc."
+
+#: ezame.glade:1145
+msgid "If entry is Link type, the URL to access."
+msgstr "Se a entrada for do tipo Ligação, o URL a aceder."
+
+#: ezame.glade:1006
+msgid ""
+"If entry is of type Application, the working directory to run the program in."
+msgstr ""
+"Se a entrada for do tipo Aplicação, a pasta de trabalho para executar o "
+"programa."
+
+#: ezame.glade:1523
+msgid ""
+"If specified, it is known that the application will map at least one window "
+"with the given string as its WM class or WM name hint."
+msgstr ""
+"Se especificado, é sabido que a aplicação vai mapear pelo menos uma janela "
+"com a cadeia dada como a sua classe WM or sugestão de nome WM"
+
+#: ezame.glade:1508
+msgid ""
+"If true, it is KNOWN that the application will send a \"remove\" message "
+"when started with the DESKTOP_STARTUP_ID environment variable set. If false, "
+"it is KNOWN that the application does not work with startup notification at "
+"all (does not shown any window, breaks even when using StartupWMClass, etc.)."
+msgstr ""
+"Se verdadeiro, é sabido que a aplicação vai enviar uma mensagem \"remover\" "
+"quando executada com a váriavel de ambiente DESKTOP_STARTUP_ID ativa. Se "
+"falso, é sabido que a aplicação não utiliza nenhuma notificação de arranque "
+"(não mostra qualquer janela, até falha quando usa StartupWMClass, etc.)."
+
+#: __main__.py:120
+msgid "Image files"
+msgstr ""
+
+#: ezame.glade:1640
+msgid "Keywords"
+msgstr "Palavras-chave"
+
+#: ezame.glade:410
+msgid "LXDE"
+msgstr ""
+
+#: __main__.py:181
+msgid "Link"
+msgstr "Ligação"
+
+#: ezame.glade:295 ezame.glade:304
+msgid "Loading..."
+msgstr "A carregar..."
+
+#: ezame.glade:1495
+msgid "Mime Types"
+msgstr "Tipos Mime"
+
+#: ezame.glade:1676
+msgid "More..."
+msgstr "Mais..."
+
+#: ezame.glade:876 __main__.py:388
+msgid "Name"
+msgstr "Nome"
+
+#: ezame.glade:47
+msgid "New Action:"
+msgstr ""
+
+#: ezame.glade:154
+msgid "New Desktop file:"
+msgstr "Novo ficheiro Desktop:"
+
+#: ezame.glade:906
+msgid "No Display"
+msgstr "Não Exibir"
+
+#: ezame.glade:904
+msgid ""
+"NoDisplay means \"this application exists, but don't display it in the menus"
+"\"."
+msgstr ""
+"Não Exibir significa \"esta aplicação existe, mas não é mostrada nos menús\"."
+
+#: ezame.glade:1314
+msgid "Not Show In"
+msgstr "Não Mostrar Em"
+
+#: ezame.glade:1298
+msgid "Only Show In"
+msgstr "Só Mostrar Em"
+
+#: ezame.glade:1008
+msgid "Path"
+msgstr "Caminho"
+
+#: ezame.glade:1406
+msgid ""
+"Path to an executable file on disk used to determine if the program is "
+"actually installed."
+msgstr ""
+"Caminho para um ficheiro executável em disco usado para determinar se o "
+"programa está realmente instalado."
+
+#: ezame.glade:311
+msgid "Preferences"
+msgstr "Preferências"
+
+#: ezame.glade:991
+msgid "Program to execute, possibly with arguments."
+msgstr "Programa a executar, possivelmente com argumentos"
+
+#: ezame.glade:1236
+msgid "Properties"
+msgstr "Propriedades"
+
+#: ezame.glade:1379
+msgid "Show In"
+msgstr "Mostrar Em"
+
+#: ezame.glade:874
+msgid "Specific name of the application, for example \"Mozilla\"."
+msgstr "Nome específico da aplicação, por exemplo \"Mozilla\"."
+
+#: ezame.glade:1510
+msgid "Startup Notify"
+msgstr "Notificação de Arranque"
+
+#: ezame.glade:1525
+msgid "Startup WM Class"
+msgstr "Classe WM de Arranque"
+
+#: ezame.glade:1838
+msgid "System"
+msgstr "Sistema"
+
+#: ezame.glade:1423
+msgid "Terminal"
+msgstr ""
+
+#: ezame.glade:1493
+msgid "The MIME type(s) supported by this application."
+msgstr "O(s) tipo(s) MIME suportados por esta aplicação."
+
+#: ezame.glade:234 ezame.glade:235 ezame.glade:1172
+msgid ""
+"This specification defines 3 types of desktop entries: Application (type 1), "
+"Link (type 2) and Directory (type 3)."
+msgstr ""
+"Esta especificação define 3 tipos de entradas de desktop: Aplicação (tipo "
+"1), Ligação (tipo 2) e Pasta (tipo 3)."
+
+#: ezame.glade:934
+msgid ""
+"Tooltip for the entry, for example \"View sites on the Internet\". The value "
+"should not be redundant with the values of Name and GenericName."
+msgstr ""
+"Dica para a entrada, por exemplo, \"Ver sites na Internet\". O conteúdo não "
+"deve ser redundante com os conteúdos de Nome e Nome Genérico."
+
+#: ezame.glade:1408
+msgid "Try Exec"
+msgstr "Tentar Exec"
+
+#: ezame.glade:237 ezame.glade:1174
+msgid "Type"
+msgstr "Tipo"
+
+#: ezame.glade:1147
+msgid "URL"
+msgstr ""
+
+#: ezame.glade:426
+msgid "Ubuntu"
+msgstr ""
+
+#: ezame.glade:1820
+msgid "User"
+msgstr "Utilizador"
+
+#: ezame.glade:1584
+msgid "Version"
+msgstr "Versão"
+
+#: ezame.glade:1582
+msgid ""
+"Version of the Desktop Entry Specification that the desktop entry conforms "
+"with."
+msgstr ""
+"Versão da Especificação de Entradas de Desktop com que a entrada está em "
+"conformidade."
+
+#: ezame.glade:1421
+msgid "Whether the program runs in a terminal window."
+msgstr "Se o programa é executado numa janela de terminal."
+
+#: ezame.glade:442
+msgid "XFCE"
+msgstr ""
+
+#: ezame.glade:1255 ezame.glade:1348
+msgid "column"
+msgstr "Coluna"
