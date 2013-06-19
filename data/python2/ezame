@@ -1,3 +1,4 @@
-#!/bin/sh
-python2 -m ezame
-
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+from ezame.main import run
+run()

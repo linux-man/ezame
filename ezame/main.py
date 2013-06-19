@@ -642,7 +642,6 @@ class Ezame(object):
 
 	def enable_all(self):
 		self.scrolledwindoweditor.set_sensitive(True)
-		self.scrolledwindowactions.set_sensitive(True)
 		self.scrolledwindowmore.set_sensitive(True)
 		self.scrolledwindowprop.set_sensitive(True)
 		self.categtree.set_sensitive(True)
@@ -654,9 +653,9 @@ class Ezame(object):
 		self.Msave.set_sensitive(True)
 		app = self.Entry.getType() == "Application"
 		link = self.Entry.getType() == "Link"
+		self.scrolledwindowactions.set_sensitive(app)
 		self.Eurl.set_visible(link)
 		self.Lurl.set_visible(link)
-		self.scrolledwindowactions.set_visible(app)
 		self.Eexec.set_visible(app)			
 		self.Lexec.set_visible(app)
 		self.Bexec.set_visible(app)
@@ -984,7 +983,7 @@ class Loading:
 		builder.add_from_file(glade_path)
 		self.Wloading = builder.get_object("Wloading")
 
-if __name__ == "__main__":
-	app = Ezame()
-	Gtk.main()
-	
+class run:
+	def __init__(self):
+		app = Ezame()
+		Gtk.main()
