@@ -511,7 +511,7 @@ class Ezame(object):
 		self.Ecomment.key = "Comment"
 		self.Ecomment.locale = "Comment"
 		self.Eurl = builder.get_object("Eurl")
-		self.Eurl.key = "Url"
+		self.Eurl.key = "URL"
 		self.Lurl = builder.get_object("Lurl")
 		self.Ronlyshowin = builder.get_object("Ronlyshowin")
 		self.Rnotshowin = builder.get_object("Rnotshowin")
@@ -987,3 +987,7 @@ class run:
 	def __init__(self):
 		app = Ezame()
 		Gtk.main()
+
+if local:
+	app = Ezame()
+	Gtk.main()
