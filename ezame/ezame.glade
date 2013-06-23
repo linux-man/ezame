@@ -17,6 +17,9 @@
     <property name="authors">&lt;a href="mailto:joao.caldas.lopes@gmail.com"&gt;Caldas Lopes&lt;/a&gt;
 
 To Ezabele, with love.</property>
+    <property name="translator_credits" translatable="yes">&lt;a href="michael.kogan@gmx.net"&gt;Michael Kogan&lt;/a&gt;
+&lt;a href="mailto:joao.caldas.lopes@gmail.com"&gt;Caldas Lopes&lt;/a&gt;
+</property>
     <property name="license_type">gpl-3-0</property>
     <child internal-child="vbox">
       <object class="GtkBox" id="aboutdialog-vbox1">
