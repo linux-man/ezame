@@ -15,10 +15,7 @@ def find_mo_files():
 PO_DIR = 'po'
 MO_DIR = os.path.join('data', 'po')
 
-if sys.version_info < (3, 0):
-	exec_file = 'data/python2/ezame'
-else:
-	exec_file = 'data/python3/ezame'
+exec_file = 'data/ezame'
 data_files = [
 		('share/icons/hicolor/128x128/apps', ['data/128/ezame.png']),
 		('share/icons/hicolor/64x64/apps', ['data/64/ezame.png']),
@@ -45,13 +42,12 @@ for po in glob.glob(os.path.join(PO_DIR, '*.po')):
 data_files.extend(find_mo_files())
     
 setup(name='ezame',
-	version='0.5.1~raring',
+	version='0.6',
 	description='Eza\'s Menu Editor',
 	author='Caldas Lopes',
 	author_email='joao.caldas.lopes@gmail.com',
 	url='https://launchpad.net/~caldas-lopes/+archive/ppa',
 	license='GPL-3',
 	packages=['ezame'],
-	requires=['xdg'],
 	data_files=data_files,
 	)

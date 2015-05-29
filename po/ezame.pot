@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-06-18 00:04+0100\n"
+"POT-Creation-Date: 2015-05-28 23:25+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,141 +17,240 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ezame.glade:7
+#: ezame.glade:1448
+msgid ""
+" If a menu has a &lt;DefaultLayout&gt; element then this will override any "
+"default-layout specified by a parent menu. The default-layout defines the "
+"suggested layout if a &lt;Menu&gt; element does either not have &lt;"
+"Layout&gt; element or if it has an empty &lt;Layout&gt; element."
+msgstr ""
+
+#: ezame.glade:1449
+msgid ""
+" If a menu has a <DefaultLayout> element then this will override any default-"
+"layout specified by a parent menu. The default-layout defines the suggested "
+"layout if a <Menu> element does either not have <Layout> element or if it "
+"has an empty <Layout> element."
+msgstr ""
+
+#: ezame.glade:984
+msgid ""
+"<OnlyUnallocated> determines whether the <Menu> can contain any desktop "
+"entries, or only those desktop entries that do not match other menus."
+msgstr ""
+
+#: ezame.glade:21
+msgid ""
+"<a href=\"michael.kogan@gmx.net\">Michael Kogan</a>\n"
+"<a href=\"mailto:joao.caldas.lopes@gmail.com\">Caldas Lopes</a>\n"
+msgstr ""
+
+#: ezame.glade:1112
+msgid ""
+"A <MergeDir> contains the name of a directory. Each file in the given "
+"directory which ends in the \".menu\" extension should be merged in the same "
+"way that a <MergeFile> would be."
+msgstr ""
+
+#: ezame.glade:8
 msgid "About Ezame"
 msgstr ""
 
-#: ezame.glade:113
+#: ezame.glade:118
 msgid "Action"
 msgstr ""
 
-#: ezame.glade:1766
+#: ezame.glade:2477
 msgid "Actions"
 msgstr ""
 
-#: __main__.py:124
+#: ezame.glade:529
+msgid "Add Child Element"
+msgstr ""
+
+#: ezame.glade:521
+msgid "Add Element"
+msgstr ""
+
+#: ezame.glade:1318
+msgid ""
+"An &lt;Include&gt; element is a set of rules attempting to match some of the "
+"known desktop entries. The &lt;Include&gt; element contains a list of any "
+"number of matching rules. Matching rules are specified using the elements "
+"&lt;And&gt;, &lt;Or&gt;, &lt;Not&gt;, &lt;All&gt;, &lt;Filename&gt;, and &lt;"
+"Category&gt;. Each rule in a list of rules has a logical OR relationship, "
+"that is, desktop entries which match any rule are included in the menu."
+msgstr ""
+
+#: ezame.glade:1319
+msgid ""
+"An <Include> element is a set of rules attempting to match some of the known "
+"desktop entries. The <Include> element contains a list of any number of "
+"matching rules. Matching rules are specified using the elements <And>, <Or>, "
+"<Not>, <All>, <Filename>, and <Category>. Each rule in a list of rules has a "
+"logical OR relationship, that is, desktop entries which match any rule are "
+"included in the menu."
+msgstr ""
+
+#: main.py:231
 msgid "Any files"
 msgstr ""
 
-#: ezame.glade:783 __main__.py:180
+#: ezame.glade:1128
+msgid ""
+"Any number of <MergeFile> elements may be listed below a <Menu> element, "
+"giving the name of another menu file to be merged into this one. The root "
+"<Menu> of the merged file will be merged into the immediate parent of the "
+"<MergeFile> element."
+msgstr ""
+
+#: ezame.glade:1050
+msgid "App Dir"
+msgstr ""
+
+#: main.py:293 ezame.glade:790 ezame.glade:2646
 msgid "Application"
 msgstr ""
 
-#: ezame.glade:1279
+#: ezame.glade:377
+msgid "Applications"
+msgstr ""
+
+#: ezame.glade:1989
 msgid "Categories"
 msgstr ""
 
-#: __main__.py:406 __main__.py:422 __main__.py:497 __main__.py:526
+#: main.py:522 main.py:538 main.py:1154 main.py:1183
 msgid "Choose a file"
 msgstr ""
 
-#: __main__.py:501
+#: main.py:1158
 msgid "Choose a folder"
 msgstr ""
 
-#: __main__.py:505
+#: main.py:1162
 msgid "Choose a icon"
 msgstr ""
 
-#: ezame.glade:393
-msgid "Cinnamon"
-msgstr ""
-
-#: ezame.glade:376
-msgid "Classic"
-msgstr ""
-
-#: ezame.glade:936
+#: ezame.glade:1644
 msgid "Comment"
 msgstr ""
 
-#: ezame.glade:15
-msgid "Copyright © 2013 Caldas Lopes"
+#: ezame.glade:16
+msgid "Copyright © 2015 Caldas Lopes"
 msgstr ""
 
-#: ezame.glade:463
-msgid "Desktop"
+#: ezame.glade:1034
+msgid "Default App Dirs"
 msgstr ""
 
-#: ezame.glade:812
+#: ezame.glade:1066
+msgid "Default Directory Dirs"
+msgstr ""
+
+#: ezame.glade:1451
+msgid "Default Layout"
+msgstr ""
+
+#: ezame.glade:1098
+msgid "Default Merge Dirs"
+msgstr ""
+
+#: ezame.glade:537
+msgid "Delete Element"
+msgstr ""
+
+#: main.py:291 ezame.glade:1018 ezame.glade:2652
+msgid "Directory"
+msgstr ""
+
+#: ezame.glade:1082
+msgid "Directory Dir"
+msgstr ""
+
+#: ezame.glade:819
 msgid "Display"
 msgstr ""
 
-#: ezame.glade:655
+#: ezame.glade:662
 msgid "Edit"
 msgstr ""
 
-#: ezame.glade:1793
+#: ezame.glade:2504
 msgid "Editor"
 msgstr ""
 
-#: ezame.glade:993 __main__.py:389
+#: ezame.glade:1338
+msgid "Exclude"
+msgstr ""
+
+#: main.py:505 ezame.glade:1701
 msgid "Exec"
 msgstr ""
 
-#: ezame.glade:16
+#: ezame.glade:17
 msgid "Eza's Menu Editor"
 msgstr ""
 
-#: ezame.glade:559
+#: ezame.glade:551
 msgid "Ezame"
 msgstr ""
 
-#: ezame.glade:578
+#: ezame.glade:570
 msgid "File"
 msgstr ""
 
-#: ezame.glade:220 ezame.glade:1189
+#: ezame.glade:224 ezame.glade:1895
 msgid "Filename"
 msgstr ""
 
-#: ezame.glade:891
+#: ezame.glade:1600
 msgid "Generic Name"
 msgstr ""
 
-#: ezame.glade:889
+#: ezame.glade:1598
 msgid "Generic name of the application, for example \"Word Processor\"."
 msgstr ""
 
-#: ezame.glade:726
+#: ezame.glade:733
 msgid "Help"
 msgstr ""
 
-#: ezame.glade:1554
+#: ezame.glade:2267
 msgid "Hidden"
 msgstr ""
 
-#: ezame.glade:1552
+#: ezame.glade:2265
 msgid ""
 "Hidden should have been called Deleted. It means the user deleted (at his "
 "level) something that was present (at an upper level, e.g. in the system "
 "dirs)."
 msgstr ""
 
-#: ezame.glade:951 __main__.py:390
+#: main.py:506 ezame.glade:1659
 msgid "Icon"
 msgstr ""
 
-#: ezame.glade:949
+#: ezame.glade:1657
 msgid "Icon to display in file manager, menus, etc."
 msgstr ""
 
-#: ezame.glade:1145
+#: ezame.glade:1851
 msgid "If entry is Link type, the URL to access."
 msgstr ""
 
-#: ezame.glade:1006
+#: ezame.glade:1714
 msgid ""
 "If entry is of type Application, the working directory to run the program in."
 msgstr ""
 
-#: ezame.glade:1523
+#: ezame.glade:2236
 msgid ""
 "If specified, it is known that the application will map at least one window "
 "with the given string as its WM class or WM name hint."
 msgstr ""
 
-#: ezame.glade:1508
+#: ezame.glade:2221
 msgid ""
 "If true, it is KNOWN that the application will send a \"remove\" message "
 "when started with the DESKTOP_STARTUP_ID environment variable set. If false, "
@@ -159,164 +258,310 @@ msgid ""
 "all (does not shown any window, breaks even when using StartupWMClass, etc.)."
 msgstr ""
 
-#: __main__.py:120
+#: main.py:227
 msgid "Image files"
 msgstr ""
 
-#: ezame.glade:1640
+#: ezame.glade:1321 ezame.glade:1404
+msgid "Include"
+msgstr ""
+
+#: ezame.glade:1162
+msgid "KDE Legacy Dirs"
+msgstr ""
+
+#: ezame.glade:2352
 msgid "Keywords"
 msgstr ""
 
-#: ezame.glade:410
-msgid "LXDE"
+#: ezame.glade:1434 ezame.glade:1517
+msgid "Layout"
 msgstr ""
 
-#: __main__.py:181
+#: ezame.glade:1146
+msgid "Legacy Dir"
+msgstr ""
+
+#: main.py:294 ezame.glade:2649
 msgid "Link"
 msgstr ""
 
-#: ezame.glade:295 ezame.glade:304
+#: ezame.glade:296 ezame.glade:305
 msgid "Loading..."
 msgstr ""
 
-#: ezame.glade:1495
+#: ezame.glade:1292
+msgid "Menu"
+msgstr ""
+
+#: ezame.glade:1543
+msgid "Menu Editor"
+msgstr ""
+
+#: ezame.glade:1258
+msgid "Menu File"
+msgstr ""
+
+#: ezame.glade:409
+msgid "Menus"
+msgstr ""
+
+#: ezame.glade:1114
+msgid "Merge Dir"
+msgstr ""
+
+#: ezame.glade:1130
+msgid "Merge File"
+msgstr ""
+
+#: ezame.glade:2208
 msgid "Mime Types"
 msgstr ""
 
-#: ezame.glade:1676
+#: ezame.glade:2387
 msgid "More..."
 msgstr ""
 
-#: ezame.glade:876 __main__.py:388
+#: main.py:504 ezame.glade:1002 ezame.glade:1585
 msgid "Name"
 msgstr ""
 
-#: ezame.glade:47
+#: ezame.glade:52
 msgid "New Action:"
 msgstr ""
 
-#: ezame.glade:154
+#: ezame.glade:158
 msgid "New Desktop file:"
 msgstr ""
 
-#: ezame.glade:906
+#: main.py:290
+msgid "New Directory"
+msgstr ""
+
+#: ezame.glade:1615
 msgid "No Display"
 msgstr ""
 
-#: ezame.glade:904
+#: main.py:355
+msgid "No Warnings"
+msgstr ""
+
+#: ezame.glade:1613
 msgid ""
 "NoDisplay means \"this application exists, but don't display it in the menus"
 "\"."
 msgstr ""
 
-#: ezame.glade:1314
+#: ezame.glade:2062
 msgid "Not Show In"
 msgstr ""
 
-#: ezame.glade:1298
+#: ezame.glade:2046
 msgid "Only Show In"
 msgstr ""
 
-#: ezame.glade:1008
+#: ezame.glade:986
+msgid "Only Unallocated"
+msgstr ""
+
+#: ezame.glade:1716
 msgid "Path"
 msgstr ""
 
-#: ezame.glade:1406
+#: ezame.glade:2120
 msgid ""
 "Path to an executable file on disk used to determine if the program is "
 "actually installed."
 msgstr ""
 
-#: ezame.glade:311
+#: ezame.glade:312
 msgid "Preferences"
 msgstr ""
 
-#: ezame.glade:991
+#: ezame.glade:1699
 msgid "Program to execute, possibly with arguments."
 msgstr ""
 
-#: ezame.glade:1236
+#: ezame.glade:1945
 msgid "Properties"
 msgstr ""
 
-#: ezame.glade:1379
+#: ezame.glade:2093
 msgid "Show In"
 msgstr ""
 
-#: ezame.glade:874
+#: ezame.glade:1583
 msgid "Specific name of the application, for example \"Mozilla\"."
 msgstr ""
 
-#: ezame.glade:1510
+#: ezame.glade:2223
 msgid "Startup Notify"
 msgstr ""
 
-#: ezame.glade:1525
+#: ezame.glade:2238
 msgid "Startup WM Class"
 msgstr ""
 
-#: ezame.glade:1838
+#: ezame.glade:2549
 msgid "System"
 msgstr ""
 
-#: ezame.glade:1423
+#: ezame.glade:2137
 msgid "Terminal"
 msgstr ""
 
-#: ezame.glade:1493
+#: ezame.glade:2206
 msgid "The MIME type(s) supported by this application."
 msgstr ""
 
-#: ezame.glade:234 ezame.glade:235 ezame.glade:1172
+#: ezame.glade:1335
+msgid ""
+"The content of an &lt;Exclude&gt; element is a list of matching rules, just "
+"as with an &lt;Include&gt;. However, the desktop entries matched are removed "
+"from the list of desktop entries included so far."
+msgstr ""
+
+#: ezame.glade:1336
+msgid ""
+"The content of an <Exclude> element is a list of matching rules, just as "
+"with an <Include>. However, the desktop entries matched are removed from the "
+"list of desktop entries included so far."
+msgstr ""
+
+#: ezame.glade:1016
+msgid ""
+"The content of the <Directory> element is the relative path of a directory "
+"entry containing meta information about the <Menu>, such as its icon and "
+"localized name. If no <Directory> is specified for a <Menu>, its <Name> "
+"field should be used as the user-visible name of the menu."
+msgstr ""
+
+#: ezame.glade:1000 ezame.glade:1256
+msgid ""
+"The content of the <Name> element is a name to be used when referring to the "
+"given menu. Each submenu of a given <Menu> must have a unique name. The "
+"<Name> field must not contain the slash character (\"/\")."
+msgstr ""
+
+#: ezame.glade:1048
+msgid ""
+"The content of this element is a directory name. Desktop entries in this "
+"directory are scanned and added to the pool of entries which can be included "
+"in this <Menu> and its submenus. Only files ending in \".desktop\" should be "
+"used, other files are ignored."
+msgstr ""
+
+#: ezame.glade:1080
+msgid ""
+"The content of this element is a directory name. Each directory listed in a "
+"<DirectoryDir> element will be searched for directory entries to be used "
+"when resolving the <Directory> element for this menu and its submenus."
+msgstr ""
+
+#: ezame.glade:1064
+msgid ""
+"The element should be treated as if it were a list of <DirectoryDir> "
+"elements containing the default desktop dir locations (datadir/desktop-"
+"directories/ etc.)."
+msgstr ""
+
+#: ezame.glade:1160
+msgid ""
+"The element should be treated as if it were a list of <LegacyDir> elements "
+"containing the traditional desktop file locations supported by KDE with a "
+"hard coded prefix of \"kde-\"."
+msgstr ""
+
+#: ezame.glade:1096
+msgid ""
+"The element should be treated as if it were a list of <MergeDir> elements "
+"containing the default merge directory locations."
+msgstr ""
+
+#: ezame.glade:1431
+msgid ""
+"The purpose of this element is to offer suggestions for the presentation of "
+"the menu. If a menu does not contain a &lt;Layout&gt; element or if it "
+"contains an empty &lt;Layout&gt; element then the default layout should be "
+"used. The &lt;Layout&gt; element may contain &lt;Filename&gt;, &lt;"
+"Menuname&gt;, &lt;Separator&gt; and &lt;Merge&gt; elements."
+msgstr ""
+
+#: ezame.glade:1432
+msgid ""
+"The purpose of this element is to offer suggestions for the presentation of "
+"the menu. If a menu does not contain a <Layout> element or if it contains an "
+"empty <Layout> element then the default layout should be used. The <Layout> "
+"element may contain <Filename>, <Menuname>, <Separator> and <Merge> elements."
+msgstr ""
+
+#: ezame.glade:1144
+msgid ""
+"The text content of this element is a directory name. Each directory listed "
+"in a <LegacyDir> element will be an old-style legacy hierarchy of desktop "
+"entries."
+msgstr ""
+
+#: ezame.glade:1032
+msgid ""
+"This element should be treated as if it were a list of <AppDir> elements "
+"containing the default app dir locations (datadir/applications/ etc.)."
+msgstr ""
+
+#: ezame.glade:238 ezame.glade:239 ezame.glade:1878
 msgid ""
 "This specification defines 3 types of desktop entries: Application (type 1), "
 "Link (type 2) and Directory (type 3)."
 msgstr ""
 
-#: ezame.glade:934
+#: ezame.glade:1642
 msgid ""
 "Tooltip for the entry, for example \"View sites on the Internet\". The value "
 "should not be redundant with the values of Name and GenericName."
 msgstr ""
 
-#: ezame.glade:1408
+#: ezame.glade:2122
 msgid "Try Exec"
 msgstr ""
 
-#: ezame.glade:237 ezame.glade:1174
+#: ezame.glade:241 ezame.glade:1880
 msgid "Type"
 msgstr ""
 
-#: ezame.glade:1147
+#: ezame.glade:1853
 msgid "URL"
 msgstr ""
 
-#: ezame.glade:426
-msgid "Ubuntu"
+#: ezame.glade:394
+msgid "Ubuntu Categories"
 msgstr ""
 
-#: ezame.glade:1820
+#: ezame.glade:2531
 msgid "User"
 msgstr ""
 
-#: ezame.glade:1584
+#: ezame.glade:617
+msgid "Validate"
+msgstr ""
+
+#: ezame.glade:2297
 msgid "Version"
 msgstr ""
 
-#: ezame.glade:1582
+#: ezame.glade:2295
 msgid ""
 "Version of the Desktop Entry Specification that the desktop entry conforms "
 "with."
 msgstr ""
 
-#: ezame.glade:1421
+#: ezame.glade:429
+msgid "View"
+msgstr ""
+
+#: ezame.glade:2135
 msgid "Whether the program runs in a terminal window."
 msgstr ""
 
-#: ezame.glade:442
-msgid "XFCE"
-msgstr ""
-
-#: ezame.glade:1255 ezame.glade:1348
+#: ezame.glade:1965 ezame.glade:2015
 msgid "column"
 msgstr ""

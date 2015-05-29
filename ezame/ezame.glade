@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.16.1 -->
 <interface>
-  <!-- interface-requires gtk+ 3.0 -->
+  <requires lib="gtk+" version="3.6"/>
   <object class="GtkAboutDialog" id="Wabout">
     <property name="can_focus">False</property>
     <property name="border_width">5</property>
@@ -11,8 +12,8 @@
     <property name="icon_name">ezame</property>
     <property name="type_hint">dialog</property>
     <property name="program_name">Ezame</property>
-    <property name="version">0.5</property>
-    <property name="copyright" translatable="yes">Copyright © 2013 Caldas Lopes</property>
+    <property name="version">0.6</property>
+    <property name="copyright" translatable="yes">Copyright © 2015 Caldas Lopes</property>
     <property name="comments" translatable="yes">Eza's Menu Editor</property>
     <property name="authors">&lt;a href="mailto:joao.caldas.lopes@gmail.com"&gt;Caldas Lopes&lt;/a&gt;
 
@@ -20,6 +21,7 @@ To Ezabele, with love.</property>
     <property name="translator_credits" translatable="yes">&lt;a href="michael.kogan@gmx.net"&gt;Michael Kogan&lt;/a&gt;
 &lt;a href="mailto:joao.caldas.lopes@gmail.com"&gt;Caldas Lopes&lt;/a&gt;
 </property>
+    <property name="logo_icon_name">ezame</property>
     <property name="license_type">gpl-3-0</property>
     <child internal-child="vbox">
       <object class="GtkBox" id="aboutdialog-vbox1">
@@ -128,7 +130,6 @@ To Ezabele, with love.</property>
                 <property name="can_focus">True</property>
                 <property name="hexpand">True</property>
                 <property name="invisible_char">•</property>
-                <property name="invisible_char_set">True</property>
               </object>
               <packing>
                 <property name="left_attach">1</property>
@@ -252,7 +253,6 @@ To Ezabele, with love.</property>
                 <property name="can_focus">True</property>
                 <property name="hexpand">True</property>
                 <property name="invisible_char">•</property>
-                <property name="invisible_char_set">True</property>
               </object>
               <packing>
                 <property name="left_attach">1</property>
@@ -267,8 +267,6 @@ To Ezabele, with love.</property>
                 <property name="can_focus">True</property>
                 <property name="hexpand">True</property>
                 <property name="button_sensitivity">on</property>
-                <property name="entry_text_column">0</property>
-                <property name="id_column">1</property>
               </object>
               <packing>
                 <property name="left_attach">1</property>
@@ -375,8 +373,8 @@ To Ezabele, with love.</property>
                 <property name="orientation">vertical</property>
                 <property name="layout_style">start</property>
                 <child>
-                  <object class="GtkRadioButton" id="Rclassic">
-                    <property name="label" translatable="yes">Classic</property>
+                  <object class="GtkRadioButton" id="Rapps">
+                    <property name="label" translatable="yes">Applications</property>
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="receives_default">False</property>
@@ -392,15 +390,13 @@ To Ezabele, with love.</property>
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkRadioButton" id="Rcinnamon">
-                    <property name="label" translatable="yes">Cinnamon</property>
+                  <object class="GtkRadioButton" id="Rubuntu">
+                    <property name="label" translatable="yes">Ubuntu Categories</property>
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="receives_default">False</property>
                     <property name="xalign">0</property>
-                    <property name="active">True</property>
                     <property name="draw_indicator">True</property>
-                    <property name="group">Rubuntu</property>
                   </object>
                   <packing>
                     <property name="expand">False</property>
@@ -409,8 +405,8 @@ To Ezabele, with love.</property>
                   </packing>
                 </child>
                 <child>
-                  <object class="GtkRadioButton" id="Rlxde">
-                    <property name="label" translatable="yes">LXDE</property>
+                  <object class="GtkRadioButton" id="Rmenu">
+                    <property name="label" translatable="yes">Menus</property>
                     <property name="visible">True</property>
                     <property name="can_focus">False</property>
                     <property name="receives_default">False</property>
@@ -424,46 +420,13 @@ To Ezabele, with love.</property>
                     <property name="position">2</property>
                   </packing>
                 </child>
-                <child>
-                  <object class="GtkRadioButton" id="Rubuntu">
-                    <property name="label" translatable="yes">Ubuntu</property>
-                    <property name="visible">True</property>
-                    <property name="can_focus">False</property>
-                    <property name="receives_default">False</property>
-                    <property name="xalign">0</property>
-                    <property name="active">True</property>
-                    <property name="draw_indicator">True</property>
-                  </object>
-                  <packing>
-                    <property name="expand">False</property>
-                    <property name="fill">True</property>
-                    <property name="position">3</property>
-                  </packing>
-                </child>
-                <child>
-                  <object class="GtkRadioButton" id="Rxfce">
-                    <property name="label" translatable="yes">XFCE</property>
-                    <property name="visible">True</property>
-                    <property name="can_focus">False</property>
-                    <property name="receives_default">False</property>
-                    <property name="xalign">0</property>
-                    <property name="active">True</property>
-                    <property name="draw_indicator">True</property>
-                    <property name="group">Rubuntu</property>
-                  </object>
-                  <packing>
-                    <property name="expand">False</property>
-                    <property name="fill">True</property>
-                    <property name="position">4</property>
-                  </packing>
-                </child>
               </object>
             </child>
             <child type="tab">
               <object class="GtkLabel" id="label4">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="label" translatable="yes">Desktop</property>
+                <property name="label" translatable="yes">View</property>
               </object>
               <packing>
                 <property name="tab_fill">False</property>
@@ -483,6 +446,7 @@ To Ezabele, with love.</property>
       <action-widget response="-5">Binputok1</action-widget>
     </action-widgets>
   </object>
+  <object class="GtkTextBuffer" id="appdir_buffer"/>
   <object class="GtkListStore" id="categstore">
     <columns>
       <!-- column-name selected -->
@@ -497,6 +461,7 @@ To Ezabele, with love.</property>
       <column type="gchararray"/>
     </columns>
   </object>
+  <object class="GtkTextBuffer" id="defaultlayout_buffer"/>
   <object class="GtkTreeStore" id="deskstore">
     <columns>
       <!-- column-name item -->
@@ -509,13 +474,13 @@ To Ezabele, with love.</property>
       <column type="gchararray"/>
       <!-- column-name system_path -->
       <column type="gchararray"/>
-      <!-- column-name local -->
+      <!-- column-name local_icon -->
       <column type="GdkPixbuf"/>
       <!-- column-name display -->
       <column type="gboolean"/>
       <!-- column-name display_visible -->
       <column type="gboolean"/>
-      <!-- column-name id -->
+      <!-- column-name menu -->
       <column type="gchararray"/>
     </columns>
   </object>
@@ -528,6 +493,13 @@ To Ezabele, with love.</property>
       <column type="gchararray"/>
     </columns>
   </object>
+  <object class="GtkTextBuffer" id="directorydir_buffer"/>
+  <object class="GtkTextBuffer" id="exclude_buffer"/>
+  <object class="GtkImage" id="image1">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="stock">gtk-yes</property>
+  </object>
   <object class="GtkImage" id="image3">
     <property name="visible">True</property>
     <property name="can_focus">False</property>
@@ -538,23 +510,40 @@ To Ezabele, with love.</property>
     <property name="can_focus">False</property>
     <property name="icon_name">computer</property>
   </object>
-  <object class="GtkListStore" id="typestore">
-    <columns>
-      <!-- column-name type -->
-      <column type="gchararray"/>
-    </columns>
-    <data>
-      <row>
-        <col id="0" translatable="yes">Application</col>
-      </row>
-      <row>
-        <col id="0" translatable="yes">Link</col>
-      </row>
-      <row>
-        <col id="0" translatable="yes">Directory</col>
-      </row>
-    </data>
+  <object class="GtkTextBuffer" id="include_buffer"/>
+  <object class="GtkMenu" id="includemenu">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <child>
+      <object class="GtkMenuItem" id="includemenu_add">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="label" translatable="yes">Add Element</property>
+        <property name="use_underline">True</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkMenuItem" id="includemenu_addchild">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="label" translatable="yes">Add Child Element</property>
+        <property name="use_underline">True</property>
+      </object>
+    </child>
+    <child>
+      <object class="GtkMenuItem" id="includemenu_delete">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="label" translatable="yes">Delete Element</property>
+        <property name="use_underline">True</property>
+      </object>
+    </child>
   </object>
+  <object class="GtkTextBuffer" id="layout_buffer"/>
+  <object class="GtkTextBuffer" id="legacydir_buffer"/>
+  <object class="GtkTextBuffer" id="menu_buffer"/>
+  <object class="GtkTextBuffer" id="mergedir_buffer"/>
+  <object class="GtkTextBuffer" id="mergefile_buffer"/>
   <object class="GtkWindow" id="window">
     <property name="width_request">400</property>
     <property name="height_request">400</property>
@@ -619,6 +608,21 @@ To Ezabele, with love.</property>
                     </child>
                     <child>
                       <object class="GtkSeparatorMenuItem" id="separatormenuitem2">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkImageMenuItem" id="Mvalidate">
+                        <property name="label" translatable="yes">Validate</property>
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="image">image1</property>
+                        <property name="use_stock">False</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkSeparatorMenuItem" id="separatormenuitem6">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                       </object>
@@ -841,6 +845,709 @@ To Ezabele, with love.</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <child>
+                      <object class="GtkScrolledWindow" id="scrolledwindowmenu">
+                        <property name="can_focus">False</property>
+                        <child>
+                          <object class="GtkViewport" id="viewport5">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="shadow_type">none</property>
+                            <child>
+                              <object class="GtkGrid" id="grid7">
+                                <property name="visible">True</property>
+                                <property name="can_focus">False</property>
+                                <property name="border_width">4</property>
+                                <property name="row_spacing">4</property>
+                                <property name="column_spacing">4</property>
+                                <child>
+                                  <object class="GtkEntry" id="Emdirectory">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">True</property>
+                                    <property name="invisible_char">•</property>
+                                  </object>
+                                  <packing>
+                                    <property name="left_attach">1</property>
+                                    <property name="top_attach">2</property>
+                                    <property name="width">1</property>
+                                    <property name="height">1</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkEntry" id="Emname">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">True</property>
+                                    <property name="hexpand">True</property>
+                                    <property name="invisible_char">•</property>
+                                  </object>
+                                  <packing>
+                                    <property name="left_attach">1</property>
+                                    <property name="top_attach">1</property>
+                                    <property name="width">1</property>
+                                    <property name="height">1</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkSwitch" id="Sonlyunallocated">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">True</property>
+                                    <property name="halign">start</property>
+                                    <property name="valign">center</property>
+                                  </object>
+                                  <packing>
+                                    <property name="left_attach">1</property>
+                                    <property name="top_attach">12</property>
+                                    <property name="width">1</property>
+                                    <property name="height">1</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkSwitch" id="Sdefaultappdirs">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">True</property>
+                                    <property name="halign">start</property>
+                                    <property name="valign">center</property>
+                                  </object>
+                                  <packing>
+                                    <property name="left_attach">1</property>
+                                    <property name="top_attach">3</property>
+                                    <property name="width">1</property>
+                                    <property name="height">1</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkSwitch" id="Sdefaultdirectorydirs">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">True</property>
+                                    <property name="halign">start</property>
+                                    <property name="valign">center</property>
+                                  </object>
+                                  <packing>
+                                    <property name="left_attach">1</property>
+                                    <property name="top_attach">5</property>
+                                    <property name="width">1</property>
+                                    <property name="height">1</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkSwitch" id="Sdefaultmergedirs">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">True</property>
+                                    <property name="halign">start</property>
+                                    <property name="valign">center</property>
+                                  </object>
+                                  <packing>
+                                    <property name="left_attach">1</property>
+                                    <property name="top_attach">7</property>
+                                    <property name="width">1</property>
+                                    <property name="height">1</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkSwitch" id="Skdelegacydirs">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">True</property>
+                                    <property name="halign">start</property>
+                                    <property name="valign">center</property>
+                                  </object>
+                                  <packing>
+                                    <property name="left_attach">1</property>
+                                    <property name="top_attach">11</property>
+                                    <property name="width">1</property>
+                                    <property name="height">1</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkScrolledWindow" id="scrolledwindow1">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">False</property>
+                                    <property name="shadow_type">in</property>
+                                    <child>
+                                      <object class="GtkTextView" id="appdir_view">
+                                        <property name="visible">True</property>
+                                        <property name="can_focus">True</property>
+                                        <property name="buffer">appdir_buffer</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                  <packing>
+                                    <property name="left_attach">1</property>
+                                    <property name="top_attach">4</property>
+                                    <property name="width">1</property>
+                                    <property name="height">1</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkLabel" id="Lname1">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">False</property>
+                                    <property name="has_tooltip">True</property>
+                                    <property name="tooltip_text" translatable="yes">&lt;OnlyUnallocated&gt; determines whether the &lt;Menu&gt; can contain any desktop entries, or only those desktop entries that do not match other menus.</property>
+                                    <property name="halign">start</property>
+                                    <property name="label" translatable="yes">Only Unallocated</property>
+                                  </object>
+                                  <packing>
+                                    <property name="left_attach">0</property>
+                                    <property name="top_attach">12</property>
+                                    <property name="width">1</property>
+                                    <property name="height">1</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkLabel" id="Labeltype2">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">False</property>
+                                    <property name="has_tooltip">True</property>
+                                    <property name="tooltip_text" translatable="yes">The content of the &lt;Name&gt; element is a name to be used when referring to the given menu. Each submenu of a given &lt;Menu&gt; must have a unique name. The &lt;Name&gt; field must not contain the slash character ("/").</property>
+                                    <property name="halign">start</property>
+                                    <property name="label" translatable="yes">Name</property>
+                                  </object>
+                                  <packing>
+                                    <property name="left_attach">0</property>
+                                    <property name="top_attach">1</property>
+                                    <property name="width">1</property>
+                                    <property name="height">1</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkLabel" id="Lfile2">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">False</property>
+                                    <property name="has_tooltip">True</property>
+                                    <property name="tooltip_text" translatable="yes">The content of the &lt;Directory&gt; element is the relative path of a directory entry containing meta information about the &lt;Menu&gt;, such as its icon and localized name. If no &lt;Directory&gt; is specified for a &lt;Menu&gt;, its &lt;Name&gt; field should be used as the user-visible name of the menu.</property>
+                                    <property name="halign">start</property>
+                                    <property name="label" translatable="yes">Directory</property>
+                                  </object>
+                                  <packing>
+                                    <property name="left_attach">0</property>
+                                    <property name="top_attach">2</property>
+                                    <property name="width">1</property>
+                                    <property name="height">1</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkLabel" id="Lfile3">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">False</property>
+                                    <property name="has_tooltip">True</property>
+                                    <property name="tooltip_text" translatable="yes">This element should be treated as if it were a list of &lt;AppDir&gt; elements containing the default app dir locations (datadir/applications/ etc.).</property>
+                                    <property name="halign">start</property>
+                                    <property name="label" translatable="yes">Default App Dirs</property>
+                                  </object>
+                                  <packing>
+                                    <property name="left_attach">0</property>
+                                    <property name="top_attach">3</property>
+                                    <property name="width">1</property>
+                                    <property name="height">1</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkLabel" id="Lfile4">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">False</property>
+                                    <property name="has_tooltip">True</property>
+                                    <property name="tooltip_text" translatable="yes">The content of this element is a directory name. Desktop entries in this directory are scanned and added to the pool of entries which can be included in this &lt;Menu&gt; and its submenus. Only files ending in ".desktop" should be used, other files are ignored.</property>
+                                    <property name="halign">start</property>
+                                    <property name="label" translatable="yes">App Dir</property>
+                                  </object>
+                                  <packing>
+                                    <property name="left_attach">0</property>
+                                    <property name="top_attach">4</property>
+                                    <property name="width">1</property>
+                                    <property name="height">1</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkLabel" id="Lfile5">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">False</property>
+                                    <property name="has_tooltip">True</property>
+                                    <property name="tooltip_text" translatable="yes">The element should be treated as if it were a list of &lt;DirectoryDir&gt; elements containing the default desktop dir locations (datadir/desktop-directories/ etc.).</property>
+                                    <property name="halign">start</property>
+                                    <property name="label" translatable="yes">Default Directory Dirs</property>
+                                  </object>
+                                  <packing>
+                                    <property name="left_attach">0</property>
+                                    <property name="top_attach">5</property>
+                                    <property name="width">1</property>
+                                    <property name="height">1</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkLabel" id="Lfile6">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">False</property>
+                                    <property name="has_tooltip">True</property>
+                                    <property name="tooltip_text" translatable="yes">The content of this element is a directory name. Each directory listed in a &lt;DirectoryDir&gt; element will be searched for directory entries to be used when resolving the &lt;Directory&gt; element for this menu and its submenus.</property>
+                                    <property name="halign">start</property>
+                                    <property name="label" translatable="yes">Directory Dir</property>
+                                  </object>
+                                  <packing>
+                                    <property name="left_attach">0</property>
+                                    <property name="top_attach">6</property>
+                                    <property name="width">1</property>
+                                    <property name="height">1</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkLabel" id="Lfile7">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">False</property>
+                                    <property name="has_tooltip">True</property>
+                                    <property name="tooltip_text" translatable="yes">The element should be treated as if it were a list of &lt;MergeDir&gt; elements containing the default merge directory locations.</property>
+                                    <property name="halign">start</property>
+                                    <property name="label" translatable="yes">Default Merge Dirs</property>
+                                  </object>
+                                  <packing>
+                                    <property name="left_attach">0</property>
+                                    <property name="top_attach">7</property>
+                                    <property name="width">1</property>
+                                    <property name="height">1</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkLabel" id="Lfile8">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">False</property>
+                                    <property name="has_tooltip">True</property>
+                                    <property name="tooltip_text" translatable="yes">A &lt;MergeDir&gt; contains the name of a directory. Each file in the given directory which ends in the ".menu" extension should be merged in the same way that a &lt;MergeFile&gt; would be.</property>
+                                    <property name="halign">start</property>
+                                    <property name="label" translatable="yes">Merge Dir</property>
+                                  </object>
+                                  <packing>
+                                    <property name="left_attach">0</property>
+                                    <property name="top_attach">8</property>
+                                    <property name="width">1</property>
+                                    <property name="height">1</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkLabel" id="Lfile9">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">False</property>
+                                    <property name="has_tooltip">True</property>
+                                    <property name="tooltip_text" translatable="yes">Any number of &lt;MergeFile&gt; elements may be listed below a &lt;Menu&gt; element, giving the name of another menu file to be merged into this one. The root &lt;Menu&gt; of the merged file will be merged into the immediate parent of the &lt;MergeFile&gt; element.</property>
+                                    <property name="halign">start</property>
+                                    <property name="label" translatable="yes">Merge File</property>
+                                  </object>
+                                  <packing>
+                                    <property name="left_attach">0</property>
+                                    <property name="top_attach">9</property>
+                                    <property name="width">1</property>
+                                    <property name="height">1</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkLabel" id="Lfile10">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">False</property>
+                                    <property name="has_tooltip">True</property>
+                                    <property name="tooltip_text" translatable="yes">The text content of this element is a directory name. Each directory listed in a &lt;LegacyDir&gt; element will be an old-style legacy hierarchy of desktop entries.</property>
+                                    <property name="halign">start</property>
+                                    <property name="label" translatable="yes">Legacy Dir</property>
+                                  </object>
+                                  <packing>
+                                    <property name="left_attach">0</property>
+                                    <property name="top_attach">10</property>
+                                    <property name="width">1</property>
+                                    <property name="height">1</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkLabel" id="Lfile11">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">False</property>
+                                    <property name="has_tooltip">True</property>
+                                    <property name="tooltip_text" translatable="yes">The element should be treated as if it were a list of &lt;LegacyDir&gt; elements containing the traditional desktop file locations supported by KDE with a hard coded prefix of "kde-".</property>
+                                    <property name="halign">start</property>
+                                    <property name="label" translatable="yes">KDE Legacy Dirs</property>
+                                  </object>
+                                  <packing>
+                                    <property name="left_attach">0</property>
+                                    <property name="top_attach">11</property>
+                                    <property name="width">1</property>
+                                    <property name="height">1</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkScrolledWindow" id="scrolledwindow2">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">False</property>
+                                    <property name="shadow_type">in</property>
+                                    <child>
+                                      <object class="GtkTextView" id="directorydir_view">
+                                        <property name="visible">True</property>
+                                        <property name="can_focus">True</property>
+                                        <property name="buffer">directorydir_buffer</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                  <packing>
+                                    <property name="left_attach">1</property>
+                                    <property name="top_attach">6</property>
+                                    <property name="width">1</property>
+                                    <property name="height">1</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkScrolledWindow" id="scrolledwindow3">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">False</property>
+                                    <property name="shadow_type">in</property>
+                                    <child>
+                                      <object class="GtkTextView" id="mergedir_view">
+                                        <property name="visible">True</property>
+                                        <property name="can_focus">True</property>
+                                        <property name="buffer">mergedir_buffer</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                  <packing>
+                                    <property name="left_attach">1</property>
+                                    <property name="top_attach">8</property>
+                                    <property name="width">1</property>
+                                    <property name="height">1</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkScrolledWindow" id="scrolledwindow4">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">False</property>
+                                    <property name="shadow_type">in</property>
+                                    <child>
+                                      <object class="GtkTextView" id="mergefile_view">
+                                        <property name="visible">True</property>
+                                        <property name="can_focus">True</property>
+                                        <property name="buffer">mergefile_buffer</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                  <packing>
+                                    <property name="left_attach">1</property>
+                                    <property name="top_attach">9</property>
+                                    <property name="width">1</property>
+                                    <property name="height">1</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkScrolledWindow" id="scrolledwindow5">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">False</property>
+                                    <property name="shadow_type">in</property>
+                                    <child>
+                                      <object class="GtkTextView" id="legacydir_view">
+                                        <property name="visible">True</property>
+                                        <property name="can_focus">True</property>
+                                        <property name="buffer">legacydir_buffer</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                  <packing>
+                                    <property name="left_attach">1</property>
+                                    <property name="top_attach">10</property>
+                                    <property name="width">1</property>
+                                    <property name="height">1</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkLabel" id="Labeltype3">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">False</property>
+                                    <property name="has_tooltip">True</property>
+                                    <property name="tooltip_text" translatable="yes">The content of the &lt;Name&gt; element is a name to be used when referring to the given menu. Each submenu of a given &lt;Menu&gt; must have a unique name. The &lt;Name&gt; field must not contain the slash character ("/").</property>
+                                    <property name="halign">start</property>
+                                    <property name="label" translatable="yes">Menu File</property>
+                                  </object>
+                                  <packing>
+                                    <property name="left_attach">0</property>
+                                    <property name="top_attach">0</property>
+                                    <property name="width">1</property>
+                                    <property name="height">1</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkEntry" id="Emfile">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">True</property>
+                                    <property name="hexpand">True</property>
+                                    <property name="editable">False</property>
+                                    <property name="invisible_char">•</property>
+                                  </object>
+                                  <packing>
+                                    <property name="left_attach">1</property>
+                                    <property name="top_attach">0</property>
+                                    <property name="width">1</property>
+                                    <property name="height">1</property>
+                                  </packing>
+                                </child>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                    <child type="tab">
+                      <object class="GtkLabel" id="label2">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="label" translatable="yes">Menu</property>
+                      </object>
+                      <packing>
+                        <property name="tab_fill">False</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkScrolledWindow" id="scrolledwindowinclude">
+                        <property name="can_focus">False</property>
+                        <child>
+                          <object class="GtkViewport" id="viewport2">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="shadow_type">none</property>
+                            <child>
+                              <object class="GtkGrid" id="grid6">
+                                <property name="visible">True</property>
+                                <property name="can_focus">False</property>
+                                <property name="border_width">4</property>
+                                <property name="row_spacing">4</property>
+                                <property name="column_spacing">4</property>
+                                <child>
+                                  <object class="GtkLabel" id="Lgenericname3">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">False</property>
+                                    <property name="has_tooltip">True</property>
+                                    <property name="tooltip_markup" translatable="yes">An &amp;lt;Include&amp;gt; element is a set of rules attempting to match some of the known desktop entries. The &amp;lt;Include&amp;gt; element contains a list of any number of matching rules. Matching rules are specified using the elements &amp;lt;And&amp;gt;, &amp;lt;Or&amp;gt;, &amp;lt;Not&amp;gt;, &amp;lt;All&amp;gt;, &amp;lt;Filename&amp;gt;, and &amp;lt;Category&amp;gt;. Each rule in a list of rules has a logical OR relationship, that is, desktop entries which match any rule are included in the menu.</property>
+                                    <property name="tooltip_text" translatable="yes">An &lt;Include&gt; element is a set of rules attempting to match some of the known desktop entries. The &lt;Include&gt; element contains a list of any number of matching rules. Matching rules are specified using the elements &lt;And&gt;, &lt;Or&gt;, &lt;Not&gt;, &lt;All&gt;, &lt;Filename&gt;, and &lt;Category&gt;. Each rule in a list of rules has a logical OR relationship, that is, desktop entries which match any rule are included in the menu.</property>
+                                    <property name="halign">start</property>
+                                    <property name="label" translatable="yes">Include</property>
+                                  </object>
+                                  <packing>
+                                    <property name="left_attach">0</property>
+                                    <property name="top_attach">0</property>
+                                    <property name="width">1</property>
+                                    <property name="height">1</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkLabel" id="Lgenericname4">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">False</property>
+                                    <property name="has_tooltip">True</property>
+                                    <property name="tooltip_markup" translatable="yes">The content of an &amp;lt;Exclude&amp;gt; element is a list of matching rules, just as with an &amp;lt;Include&amp;gt;. However, the desktop entries matched are removed from the list of desktop entries included so far.</property>
+                                    <property name="tooltip_text" translatable="yes">The content of an &lt;Exclude&gt; element is a list of matching rules, just as with an &lt;Include&gt;. However, the desktop entries matched are removed from the list of desktop entries included so far.</property>
+                                    <property name="halign">start</property>
+                                    <property name="label" translatable="yes">Exclude</property>
+                                  </object>
+                                  <packing>
+                                    <property name="left_attach">0</property>
+                                    <property name="top_attach">1</property>
+                                    <property name="width">1</property>
+                                    <property name="height">1</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkScrolledWindow" id="scrolledwindow6">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">False</property>
+                                    <property name="hexpand">True</property>
+                                    <property name="vexpand">True</property>
+                                    <property name="shadow_type">in</property>
+                                    <child>
+                                      <object class="GtkTextView" id="include_view">
+                                        <property name="visible">True</property>
+                                        <property name="can_focus">True</property>
+                                        <property name="buffer">include_buffer</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                  <packing>
+                                    <property name="left_attach">1</property>
+                                    <property name="top_attach">0</property>
+                                    <property name="width">1</property>
+                                    <property name="height">1</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkScrolledWindow" id="scrolledwindow7">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">False</property>
+                                    <property name="hexpand">True</property>
+                                    <property name="vexpand">True</property>
+                                    <property name="shadow_type">in</property>
+                                    <child>
+                                      <object class="GtkTextView" id="exclude_view">
+                                        <property name="visible">True</property>
+                                        <property name="can_focus">True</property>
+                                        <property name="buffer">exclude_buffer</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                  <packing>
+                                    <property name="left_attach">1</property>
+                                    <property name="top_attach">1</property>
+                                    <property name="width">1</property>
+                                    <property name="height">1</property>
+                                  </packing>
+                                </child>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="position">1</property>
+                      </packing>
+                    </child>
+                    <child type="tab">
+                      <object class="GtkLabel" id="label6">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="label" translatable="yes">Include</property>
+                      </object>
+                      <packing>
+                        <property name="position">1</property>
+                        <property name="tab_fill">False</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkScrolledWindow" id="scrolledwindowlayout">
+                        <property name="can_focus">False</property>
+                        <child>
+                          <object class="GtkViewport" id="viewport6">
+                            <property name="visible">True</property>
+                            <property name="can_focus">False</property>
+                            <property name="shadow_type">none</property>
+                            <child>
+                              <object class="GtkGrid" id="grid8">
+                                <property name="visible">True</property>
+                                <property name="can_focus">False</property>
+                                <property name="border_width">4</property>
+                                <property name="row_spacing">4</property>
+                                <property name="column_spacing">4</property>
+                                <child>
+                                  <object class="GtkLabel" id="Lpath5">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">False</property>
+                                    <property name="has_tooltip">True</property>
+                                    <property name="tooltip_markup" translatable="yes">The purpose of this element is to offer suggestions for the presentation of the menu. If a menu does not contain a &amp;lt;Layout&amp;gt; element or if it contains an empty &amp;lt;Layout&amp;gt; element then the default layout should be used. The &amp;lt;Layout&amp;gt; element may contain &amp;lt;Filename&amp;gt;, &amp;lt;Menuname&amp;gt;, &amp;lt;Separator&amp;gt; and &amp;lt;Merge&amp;gt; elements.</property>
+                                    <property name="tooltip_text" translatable="yes">The purpose of this element is to offer suggestions for the presentation of the menu. If a menu does not contain a &lt;Layout&gt; element or if it contains an empty &lt;Layout&gt; element then the default layout should be used. The &lt;Layout&gt; element may contain &lt;Filename&gt;, &lt;Menuname&gt;, &lt;Separator&gt; and &lt;Merge&gt; elements.</property>
+                                    <property name="halign">start</property>
+                                    <property name="label" translatable="yes">Layout</property>
+                                  </object>
+                                  <packing>
+                                    <property name="left_attach">0</property>
+                                    <property name="top_attach">1</property>
+                                    <property name="width">1</property>
+                                    <property name="height">1</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkLabel" id="Lpath6">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">False</property>
+                                    <property name="has_tooltip">True</property>
+                                    <property name="tooltip_markup" translatable="yes"> If a menu has a &amp;lt;DefaultLayout&amp;gt; element then this will override any default-layout specified by a parent menu. The default-layout defines the suggested layout if a &amp;lt;Menu&amp;gt; element does either not have &amp;lt;Layout&amp;gt; element or if it has an empty &amp;lt;Layout&amp;gt; element.</property>
+                                    <property name="tooltip_text" translatable="yes"> If a menu has a &lt;DefaultLayout&gt; element then this will override any default-layout specified by a parent menu. The default-layout defines the suggested layout if a &lt;Menu&gt; element does either not have &lt;Layout&gt; element or if it has an empty &lt;Layout&gt; element.</property>
+                                    <property name="halign">start</property>
+                                    <property name="label" translatable="yes">Default Layout</property>
+                                  </object>
+                                  <packing>
+                                    <property name="left_attach">0</property>
+                                    <property name="top_attach">0</property>
+                                    <property name="width">1</property>
+                                    <property name="height">1</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkScrolledWindow" id="scrolledwindow8">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">False</property>
+                                    <property name="hexpand">True</property>
+                                    <property name="vexpand">True</property>
+                                    <property name="shadow_type">in</property>
+                                    <child>
+                                      <object class="GtkTextView" id="layout_view">
+                                        <property name="visible">True</property>
+                                        <property name="can_focus">True</property>
+                                        <property name="buffer">layout_buffer</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                  <packing>
+                                    <property name="left_attach">1</property>
+                                    <property name="top_attach">1</property>
+                                    <property name="width">1</property>
+                                    <property name="height">1</property>
+                                  </packing>
+                                </child>
+                                <child>
+                                  <object class="GtkScrolledWindow" id="scrolledwindow9">
+                                    <property name="visible">True</property>
+                                    <property name="can_focus">False</property>
+                                    <property name="hexpand">True</property>
+                                    <property name="vexpand">True</property>
+                                    <property name="shadow_type">in</property>
+                                    <child>
+                                      <object class="GtkTextView" id="defaultlayout_view">
+                                        <property name="visible">True</property>
+                                        <property name="can_focus">True</property>
+                                        <property name="buffer">defaultlayout_buffer</property>
+                                      </object>
+                                    </child>
+                                  </object>
+                                  <packing>
+                                    <property name="left_attach">1</property>
+                                    <property name="top_attach">0</property>
+                                    <property name="width">1</property>
+                                    <property name="height">1</property>
+                                  </packing>
+                                </child>
+                              </object>
+                            </child>
+                          </object>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="position">2</property>
+                      </packing>
+                    </child>
+                    <child type="tab">
+                      <object class="GtkLabel" id="label7">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="label" translatable="yes">Layout</property>
+                      </object>
+                      <packing>
+                        <property name="position">2</property>
+                        <property name="tab_fill">False</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <object class="GtkScrolledWindow" id="scrolledwindowmenueditor">
+                        <property name="can_focus">False</property>
+                        <child>
+                          <object class="GtkTextView" id="menu_view">
+                            <property name="visible">True</property>
+                            <property name="can_focus">True</property>
+                            <property name="buffer">menu_buffer</property>
+                          </object>
+                        </child>
+                      </object>
+                      <packing>
+                        <property name="position">3</property>
+                      </packing>
+                    </child>
+                    <child type="tab">
+                      <object class="GtkLabel" id="label8">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="label" translatable="yes">Menu Editor</property>
+                      </object>
+                      <packing>
+                        <property name="position">3</property>
+                        <property name="tab_fill">False</property>
+                      </packing>
+                    </child>
+                    <child>
                       <object class="GtkScrolledWindow" id="scrolledwindowprop">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
@@ -861,7 +1568,6 @@ To Ezabele, with love.</property>
                                     <property name="visible">True</property>
                                     <property name="can_focus">True</property>
                                     <property name="invisible_char">•</property>
-                                    <property name="invisible_char_set">True</property>
                                   </object>
                                   <packing>
                                     <property name="left_attach">1</property>
@@ -921,7 +1627,6 @@ To Ezabele, with love.</property>
                                     <property name="can_focus">True</property>
                                     <property name="valign">center</property>
                                     <property name="invisible_char">•</property>
-                                    <property name="invisible_char_set">True</property>
                                   </object>
                                   <packing>
                                     <property name="left_attach">1</property>
@@ -1068,7 +1773,6 @@ To Ezabele, with love.</property>
                                         <property name="can_focus">True</property>
                                         <property name="hexpand">True</property>
                                         <property name="invisible_char">•</property>
-                                        <property name="invisible_char_set">True</property>
                                       </object>
                                       <packing>
                                         <property name="expand">False</property>
@@ -1110,7 +1814,6 @@ To Ezabele, with love.</property>
                                         <property name="can_focus">True</property>
                                         <property name="hexpand">True</property>
                                         <property name="invisible_char">•</property>
-                                        <property name="invisible_char_set">True</property>
                                       </object>
                                       <packing>
                                         <property name="expand">False</property>
@@ -1202,9 +1905,9 @@ To Ezabele, with love.</property>
                                   <object class="GtkEntry" id="Efile">
                                     <property name="visible">True</property>
                                     <property name="can_focus">True</property>
+                                    <property name="hexpand">True</property>
                                     <property name="editable">False</property>
                                     <property name="invisible_char">•</property>
-                                    <property name="invisible_char_set">True</property>
                                   </object>
                                   <packing>
                                     <property name="left_attach">1</property>
@@ -1231,6 +1934,9 @@ To Ezabele, with love.</property>
                           </object>
                         </child>
                       </object>
+                      <packing>
+                        <property name="position">4</property>
+                      </packing>
                     </child>
                     <child type="tab">
                       <object class="GtkLabel" id="label1">
@@ -1239,6 +1945,7 @@ To Ezabele, with love.</property>
                         <property name="label" translatable="yes">Properties</property>
                       </object>
                       <packing>
+                        <property name="position">4</property>
                         <property name="tab_fill">False</property>
                       </packing>
                     </child>
@@ -1272,7 +1979,7 @@ To Ezabele, with love.</property>
                         </child>
                       </object>
                       <packing>
-                        <property name="position">1</property>
+                        <property name="position">5</property>
                       </packing>
                     </child>
                     <child type="tab">
@@ -1282,12 +1989,12 @@ To Ezabele, with love.</property>
                         <property name="label" translatable="yes">Categories</property>
                       </object>
                       <packing>
-                        <property name="position">1</property>
+                        <property name="position">5</property>
                         <property name="tab_fill">False</property>
                       </packing>
                     </child>
                     <child>
-                      <object class="GtkGrid" id="grid5">
+                      <object class="GtkGrid" id="gridshow">
                         <property name="visible">True</property>
                         <property name="can_focus">False</property>
                         <child>
@@ -1376,7 +2083,7 @@ To Ezabele, with love.</property>
                         </child>
                       </object>
                       <packing>
-                        <property name="position">2</property>
+                        <property name="position">6</property>
                       </packing>
                     </child>
                     <child type="tab">
@@ -1386,7 +2093,7 @@ To Ezabele, with love.</property>
                         <property name="label" translatable="yes">Show In</property>
                       </object>
                       <packing>
-                        <property name="position">2</property>
+                        <property name="position">6</property>
                         <property name="tab_fill">False</property>
                       </packing>
                     </child>
@@ -1461,7 +2168,6 @@ To Ezabele, with love.</property>
                                         <property name="can_focus">True</property>
                                         <property name="hexpand">True</property>
                                         <property name="invisible_char">•</property>
-                                        <property name="invisible_char_set">True</property>
                                       </object>
                                       <packing>
                                         <property name="expand">False</property>
@@ -1603,7 +2309,6 @@ To Ezabele, with love.</property>
                                     <property name="can_focus">True</property>
                                     <property name="hexpand">True</property>
                                     <property name="invisible_char">•</property>
-                                    <property name="invisible_char_set">True</property>
                                   </object>
                                   <packing>
                                     <property name="left_attach">1</property>
@@ -1658,7 +2363,6 @@ To Ezabele, with love.</property>
                                     <property name="visible">True</property>
                                     <property name="can_focus">True</property>
                                     <property name="invisible_char">•</property>
-                                    <property name="invisible_char_set">True</property>
                                   </object>
                                   <packing>
                                     <property name="left_attach">1</property>
@@ -1673,7 +2377,7 @@ To Ezabele, with love.</property>
                         </child>
                       </object>
                       <packing>
-                        <property name="position">3</property>
+                        <property name="position">7</property>
                       </packing>
                     </child>
                     <child type="tab">
@@ -1683,7 +2387,7 @@ To Ezabele, with love.</property>
                         <property name="label" translatable="yes">More...</property>
                       </object>
                       <packing>
-                        <property name="position">3</property>
+                        <property name="position">7</property>
                         <property name="tab_fill">False</property>
                       </packing>
                     </child>
@@ -1763,7 +2467,7 @@ To Ezabele, with love.</property>
                         </child>
                       </object>
                       <packing>
-                        <property name="position">4</property>
+                        <property name="position">8</property>
                       </packing>
                     </child>
                     <child type="tab">
@@ -1773,7 +2477,7 @@ To Ezabele, with love.</property>
                         <property name="label" translatable="yes">Actions</property>
                       </object>
                       <packing>
-                        <property name="position">4</property>
+                        <property name="position">8</property>
                         <property name="tab_fill">False</property>
                       </packing>
                     </child>
@@ -1790,7 +2494,7 @@ To Ezabele, with love.</property>
                         </child>
                       </object>
                       <packing>
-                        <property name="position">5</property>
+                        <property name="position">9</property>
                       </packing>
                     </child>
                     <child type="tab">
@@ -1800,7 +2504,7 @@ To Ezabele, with love.</property>
                         <property name="label" translatable="yes">Editor</property>
                       </object>
                       <packing>
-                        <property name="position">5</property>
+                        <property name="position">9</property>
                         <property name="tab_fill">False</property>
                       </packing>
                     </child>
@@ -1931,5 +2635,22 @@ To Ezabele, with love.</property>
         </child>
       </object>
     </child>
+  </object>
+  <object class="GtkListStore" id="typestore">
+    <columns>
+      <!-- column-name type -->
+      <column type="gchararray"/>
+    </columns>
+    <data>
+      <row>
+        <col id="0" translatable="yes">Application</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">Link</col>
+      </row>
+      <row>
+        <col id="0" translatable="yes">Directory</col>
+      </row>
+    </data>
   </object>
 </interface>
