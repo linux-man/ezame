@@ -1023,6 +1023,7 @@ class Ezame(object):
 				if not(self.config.has_option("menus", menu_file)):
 					with open (menu_file, "r") as menu: data=menu.read()
 					self.config.set("menus", menu_file, data)
+					if not os.path.exists(os.path.dirname(self.config_file)): os.mkdir(os.path.dirname(self.config_file))
 					with open(self.config_file, "w") as config_file: self.config.write(config_file)
 				try:
 					self.menu_filename = menu_file
@@ -1290,7 +1291,7 @@ class Ezame(object):
 		def load_prefs(self):
 			self.de_list = ["GNOME", "KDE",  "LXDE", "MATE", "Razor", "ROX", "TDE", "Unity", "XFCE", "Cinnamon", "Old"]
 			self.desktop = os.environ.get('XDG_CURRENT_DESKTOP')
-			if self.desktop != "Unity": self.desktop == "Apps"
+			if self.desktop != "Unity": self.desktop = "Apps"
 			self.icon_size = 22
 
 			xdg_data_home = os.environ.get("XDG_DATA_HOME") or os.path.join(os.path.expanduser("~"), ".local", "share")
