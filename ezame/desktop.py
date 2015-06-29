@@ -57,8 +57,12 @@ class DE(object):
 			try:
 				value = self.content.get(group, key, raw = True)
 				if value == "": return ""
-				gettext.textdomain(self.get('X-Ubuntu-Gettext-Domain'))
-				return _(value)
+				if self.get('X-Ubuntu-Gettext-Domain')!="": #for Ubuntu systems
+					gettext.textdomain(self.get('X-Ubuntu-Gettext-Domain'))
+				if isinstance(_(value), str): #gettext can return a info list
+					return _(value)
+				else:
+					return value
 			except: return ""
 		else:
 			try: return self.content.get(group, key, raw = True)
