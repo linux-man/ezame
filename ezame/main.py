@@ -1295,9 +1295,19 @@ class Ezame(object):
 			self.icon_size = 22
 
 			xdg_data_home = os.environ.get("XDG_DATA_HOME") or os.path.join(os.path.expanduser("~"), ".local", "share")
-			self.xdg_data_dirs = os.environ.get("XDG_DATA_DIRS").split(":") + [xdg_data_home] or ("/usr/local/share:/usr/share").split(":")
+			try:
+				self.xdg_data_dirs = os.environ.get("XDG_DATA_DIRS").split(":") + [xdg_data_home]
+			except:
+				self.xdg_data_dirs = ("/usr/local/share:/usr/share").split(":") + [xdg_data_home]
+				pass
+
 			xdg_config_home = os.environ.get("XDG_CONFIG_HOME") or os.path.join(os.path.expanduser("~"), ".config")
-			self.xdg_config_dirs = os.environ.get("XDG_CONFIG_DIRS").split(":") + [xdg_config_home] or ["/etc/xdg"]
+			try:
+				self.xdg_config_dirs = os.environ.get("XDG_CONFIG_DIRS").split(":") + [xdg_config_home]
+			except:
+				self.xdg_config_dirs = ["/etc/xdg"] + [xdg_config_home]
+				pass
+				
 			self.xdg_data_dirs.reverse()
 			self.xdg_config_dirs.reverse()
 			self.data_home = xdg_data_home

@@ -3,7 +3,7 @@ Ezame
 
 Eza's Menu Editor
 
-Ezame is a Desktop file Editor - who eventually will be able to edit menu structures for interfaces that still use them.
+Ezame is a Desktop and Menu file Editor.
 
 Ezame is only compatible with python 3. Can be installed (and packaged) using python3 setup.py.
 
