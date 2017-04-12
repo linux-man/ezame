@@ -42,7 +42,7 @@ for po in glob.glob(os.path.join(PO_DIR, '*.po')):
 data_files.extend(find_mo_files())
     
 setup(name='ezame',
-	version='0.6.1',
+	version='0.6.2',
 	description='Eza\'s Menu Editor',
 	author='Caldas Lopes',
 	author_email='joao.caldas.lopes@gmail.com',

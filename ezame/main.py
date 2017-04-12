@@ -252,7 +252,10 @@ class Ezame(object):
 			categs = eval(model[model.get_iter(path)][3])
 			for categ in categs:
 				if categ in categories: categories.remove(categ)
-		self.Entry.set("Categories",";".join(categories))			
+		if len(categories) == 0:
+			self.Entry.set("Categories","")			
+		else:
+			self.Entry.set("Categories",";".join(categories)+";")			
 		self.update_objects()
 
 	def save_des(self):
@@ -262,7 +265,10 @@ class Ezame(object):
 		else:
 			show_selected = "NotShowIn"
 			show_removed = "OnlyShowIn"
-		self.Entry.set(show_selected, ";".join(row[1] for row in self.destore if row[0]))
+		showin = ";".join(row[1] for row in self.destore if row[0]) + ";"
+		if showin == ";":
+			showin = "";
+		self.Entry.set(show_selected, showin)
 		self.Entry.removeKey(show_removed)
 		self.update_objects()
 		
@@ -902,9 +908,11 @@ class Ezame(object):
 			menuname = "All"
 			rootiter = self.deskstore.append(None, [_(menuname), "0", self.load_icon("applications-other"), "", "", None, True, False, _(menuname)])
 			for desk_file in desk_files:
-				Entry, local_icon = self.read_entry(desk_file)
-				name = Entry.get("Name", locale = True)
-				treeiter = self.deskstore.append(rootiter,[name, name, self.load_icon(Entry.get("Icon", locale = True)), desk_file[i_local], desk_file[i_system], local_icon, not Entry.getboolean("NoDisplay"), True, desk_file[i_filename]])
+				try:
+					Entry, local_icon = self.read_entry(desk_file)
+					name = Entry.get("Name", locale = True)
+					treeiter = self.deskstore.append(rootiter,[name, name, self.load_icon(Entry.get("Icon", locale = True)), desk_file[i_local], desk_file[i_system], local_icon, not Entry.getboolean("NoDisplay"), True, desk_file[i_filename]])
+				except: pass
 			for menuname in menus:
 				gettext.textdomain("unity-lens-applications")
 				self.categstore.append([False, _(menuname), menus[menuname][0], menus[menuname][1], menus[menuname][2]])
@@ -937,9 +945,11 @@ class Ezame(object):
 
 			desk_files = self.load_deskfiles()
 			for desk_file in desk_files:
-				Entry, local_icon = self.read_entry(desk_file)
-				name = Entry.get("Name", locale = True)
-				treeiter = self.deskstore.append(None,[name, name, self.load_icon(Entry.get("Icon", locale = True)), desk_file[i_local], desk_file[i_system], local_icon, not Entry.getboolean("NoDisplay"), True, desk_file[i_filename]])
+				try:
+					Entry, local_icon = self.read_entry(desk_file)
+					name = Entry.get("Name", locale = True)
+					treeiter = self.deskstore.append(None,[name, name, self.load_icon(Entry.get("Icon", locale = True)), desk_file[i_local], desk_file[i_system], local_icon, not Entry.getboolean("NoDisplay"), True, desk_file[i_filename]])
+				except: pass
 			for menuname in menus:
 				gettext.textdomain("unity-lens-applications")
 				self.categstore.append([False, _(menuname), menus[menuname][0], menus[menuname][1], menus[menuname][2]])
@@ -1003,8 +1013,10 @@ class Ezame(object):
 					if Directory:
 						for dir_file in dir_files:
 							if Directory == dir_file[i_filename]:
-								Entry, local_icon = self.read_entry(dir_file)
-								treeroot = self.deskstore.append(parent,[Entry.get("Name", locale = True), Entry.get("Name", locale = True), self.load_icon(Entry.get("Icon", locale = True)), dir_file[i_local], dir_file[i_system], local_icon, not Entry.getboolean("NoDisplay"), parent, Name])
+								try:
+									Entry, local_icon = self.read_entry(dir_file)
+									treeroot = self.deskstore.append(parent,[Entry.get("Name", locale = True), Entry.get("Name", locale = True), self.load_icon(Entry.get("Icon", locale = True)), dir_file[i_local], dir_file[i_system], local_icon, not Entry.getboolean("NoDisplay"), parent, Name])
+								except: pass
 								break
 					else:
 						treeroot = self.deskstore.append(parent,[Name, Name, None, "", "", None, True, parent, Name])						
@@ -1020,16 +1032,18 @@ class Ezame(object):
 			try: self.config.add_section("menus")
 			except: pass
 			for menu_file in menu_files:
-				if not(self.config.has_option("menus", menu_file)):
-					with open (menu_file, "r") as menu: data=menu.read()
-					self.config.set("menus", menu_file, data)
-					if not os.path.exists(os.path.dirname(self.config_file)): os.mkdir(os.path.dirname(self.config_file))
-					with open(self.config_file, "w") as config_file: self.config.write(config_file)
 				try:
-					self.menu_filename = menu_file
-					self.menu = ET.parse(self.menu_filename, parser=ET.XMLParser(target=MyTreeBuilder()))
-					self.menu.getroot().set("filename", menu_file)
-					load_tree(self.menu.getroot(), None)
+					if not(self.config.has_option("menus", menu_file)):
+						with open(menu_file, "r") as menu: data=menu.read()
+						self.config.set("menus", menu_file, data)
+						if not os.path.exists(os.path.dirname(self.config_file)): os.mkdir(os.path.dirname(self.config_file))
+						with open(self.config_file, "w") as config_file: self.config.write(config_file)
+					try:
+						self.menu_filename = menu_file
+						self.menu = ET.parse(self.menu_filename, parser=ET.XMLParser(target=MyTreeBuilder()))
+						self.menu.getroot().set("filename", menu_file)
+						load_tree(self.menu.getroot(), None)
+					except: pass
 				except: pass
 				
 		self.desktree.grab_focus()
