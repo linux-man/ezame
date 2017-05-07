@@ -79,7 +79,4 @@ License: GPL-3+
 
 On Debian systems, the complete text of the GNU Lesser General
 Public License can be found in `/usr/share/common-licenses/LGPL'.
-<<<<<<< HEAD
 
-=======
->>>>>>> 4bff164e6593d654f70dab7211136af55f601623
