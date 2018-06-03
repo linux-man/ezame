@@ -128,10 +128,7 @@ class Ezame(object):
 			f.close()
 			command = ["cp", f.name, self.menu_filename]
 			p = subprocess.Popen(command)
-			if p.wait() != 0:
-				command = ["gksudo", "-D", "Ezame - Restore Menu", "cp " + f.name + " " + self.menu_filename]
-				p = subprocess.Popen(command)
-				p.wait()
+			p.wait()
 			self.load_menu()
 		else:
 			self.update_info()
@@ -156,10 +153,7 @@ class Ezame(object):
 			f.close()
 			command = ["cp", f.name, self.menu_filename]
 			p = subprocess.Popen(command)
-			if p.wait() != 0:
-				command = ["gksudo", "-D", "Ezame - Save Menu", "cp " + f.name + " " + self.menu_filename]
-				p = subprocess.Popen(command)
-				p.wait()
+			p.wait()
 		else:
 			if self.buffer_changed: self.on_desktop_view_focus_out_event(None, None)
 			r = self.Entry.write()

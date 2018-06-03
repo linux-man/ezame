@@ -128,10 +128,7 @@ class DE(object):
 			if p.wait() == 0:
 				command = ["desktop-file-install", "--dir="+ os.path.dirname(self.filename), f.name]
 				p = subprocess.Popen(command)
-				if p.wait() != 0:
-					command = ["gksudo", "-D", "Ezame", "desktop-file-install --dir="+ os.path.dirname(self.filename) + " " + f.name]
-					p = subprocess.Popen(command)
-					p.wait()
+				p.wait()
 			else:
 				return '\n'.join(line.split(": ", maxsplit=1)[-1] for line in p.communicate()[0].decode("utf-8").split('\n'))
 			os.remove(f.name)

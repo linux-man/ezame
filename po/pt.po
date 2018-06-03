@@ -114,9 +114,8 @@ msgid "Application"
 msgstr "Aplicação"
 
 #: ezame.glade:377
-#, fuzzy
 msgid "Applications"
-msgstr "Aplicação"
+msgstr "Aplicações"
 
 #: ezame.glade:1989
 msgid "Categories"

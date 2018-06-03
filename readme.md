@@ -10,6 +10,12 @@ Ezame is only compatible with python 3. Can be installed (and packaged) using py
 
 Changelog
 
+ezame (0.6.3)
+
+  * Admin mode with pkexec
+
+ -- Caldas Lopes <joao.caldas.lopes@gmail.com>  Sun, 03 June 2018 23:25:12 +0100
+
 ezame (0.6)
 
   * Dropped compatibility with Python 2
