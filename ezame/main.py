@@ -128,7 +128,10 @@ class Ezame(object):
 			f.close()
 			command = ["cp", f.name, self.menu_filename]
 			p = subprocess.Popen(command)
-			p.wait()
+			if p.wait() != 0:
+				command = ["pkexec", "cp", f.name, self.menu_filename]
+				p = subprocess.Popen(command)
+				p.wait()
 			self.load_menu()
 		else:
 			self.update_info()
@@ -153,7 +156,10 @@ class Ezame(object):
 			f.close()
 			command = ["cp", f.name, self.menu_filename]
 			p = subprocess.Popen(command)
-			p.wait()
+			if p.wait() != 0:
+				command = ["pkexec", "cp", f.name, self.menu_filename]
+				p = subprocess.Popen(command)
+				p.wait()
 		else:
 			if self.buffer_changed: self.on_desktop_view_focus_out_event(None, None)
 			r = self.Entry.write()

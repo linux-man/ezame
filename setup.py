@@ -22,9 +22,7 @@ data_files = [
 		('share/icons/hicolor/32x32/apps/', ['data/32/ezame.png']),
 		('share/icons/hicolor/16x16/apps/', ['data/16/ezame.png']),
 		('share/applications/', ['data/ezame.desktop']),
-		('share/applications/', ['data/ezame-root.desktop']),
 		('share/ezame/', ['ezame/ezame.glade']),
-    ('usr/share/polkit-1/actions/', ['data/org.ezame.policy']),
 		('bin/', [exec_file])]
 		
 for po in glob.glob(os.path.join(PO_DIR, '*.po')):
@@ -44,7 +42,7 @@ for po in glob.glob(os.path.join(PO_DIR, '*.po')):
 data_files.extend(find_mo_files())
     
 setup(name='ezame',
-	version='0.6.3',
+	version='0.6.4',
 	description='Eza\'s Menu Editor',
 	author='Caldas Lopes',
 	author_email='joao.caldas.lopes@gmail.com',
