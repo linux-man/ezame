@@ -1,0 +1,74 @@
+ezame (0.6.4-1) bionic; urgency=low
+
+  * Revert to 0.6.2 behaviour - call pkexec when needed
+
+ -- Caldas Lopes <joao.caldas.lopes@gmail.com>  Thu, 30 Aug 2018 01:42:32 +0100
+
+ezame (0.6.3-1) bionic; urgency=low
+
+  * Admin mode with pkexec
+
+ -- Caldas Lopes <joao.caldas.lopes@gmail.com>  Sun, 03 Jun 2018 23:32:35 +0100
+
+ezame (0.6.2.1-0) xenial; urgency=low
+
+  * Catch bad encoded file names
+  * Add semicolon to categories and desktops
+  * Solve crash when XDG_DATA_DIRS is not defined
+
+ -- Caldas Lopes <joao.caldas.lopes@gmail.com>  Wed, 12 Apr 2017 13:43:55 +0100
+
+ezame (0.6.1-0trusty2) trusty; urgency=low
+
+  * Bug fixes for non-Unity desktops
+
+ -- Caldas Lopes <joao.caldas.lopes@gmail.com>  Wed, 03 Jun 2015 21:56:33 +0100
+
+ezame (0.6-0trusty2) trusty; urgency=low
+
+  * Dropped compatibility with Python 2
+  * Menu edition
+  * Separation between Menu and Desktop files
+  * Use desktop-file-utils to validate and install files
+  * Original menu backup
+  * Create Menu Entry + Directory (Menu Entry must be manually removed)
+  * Dropped python-xdg dependency
+
+ -- Caldas Lopes <joao.caldas.lopes@gmail.com>  Fri, 29 May 2015 00:50:08 +0100
+
+ezame (0.5~raring-1) raring; urgency=low
+
+  * Actions
+  * Initial LXDE and XFCE Support 
+  * New directory files go to desktop-directories
+  * Show Menu Separators
+
+ -- Caldas Lopes <joao.caldas.lopes@gmail.com>  Tue, 18 Jun 2013 00:31:31 +0100
+
+ezame (0.4-0raring1) raring; urgency=low
+
+  * Corrected dialog caption translation
+  * Initial Cinnamon support
+  * Several icons sizes
+
+ -- Caldas Lopes <joao.caldas.lopes@gmail.com>  Tue, 11 Jun 2013 19:16:16 +0100
+
+ezame (0.3.3-1) raring; urgency=low
+
+  * New desktop name updated on tree entry
+  * Change icon location to icon/hicolor
+  * new desktop file get execute bit
+  * Corrected translation
+
+ -- Caldas Lopes <joao.caldas.lopes@gmail.com>  Fri, 07 Jun 2013 21:07:52 +0100
+
+ezame (0.2-1) raring; urgency=low
+
+  * Rebuild. Package enhancement
+
+ezame (0.1-1) raring; urgency=low
+
+  * Original build
+
+ -- Caldas Lopes <joao.caldas.lopes@gmail.com>  Wed, 05 Jun 2013 16:03:40 +0100
+

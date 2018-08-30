@@ -1,0 +1,13 @@
+Source: ezame
+Maintainer: Caldas Lopes <joao.caldas.lopes@gmail.com>
+Section: python
+Priority: optional
+Build-Depends: dh-python, python3-all, debhelper (>= 9)
+Standards-Version: 3.9.6
+Homepage: https://launchpad.net/~caldas-lopes/+archive/ppa
+
+Package: ezame
+Architecture: all
+Depends: ${misc:Depends}, ${python3:Depends}, python3-gi, desktop-file-utils
+Description: Eza's Menu Editor
+
