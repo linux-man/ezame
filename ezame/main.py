@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+import gi
+gi.require_version('Gtk', '3.0')
 import os, sys, fnmatch
 import xml.etree.ElementTree as ET
 import subprocess, tempfile
@@ -9,9 +11,12 @@ from configparser import ConfigParser
 local = (len(sys.argv) > 1) and (sys.argv[1] == "local")
 if local:
 	from desktop import DE
+	from ThemedIconChooser import IconChooserDialog
+	import ThemedIconChooser
 	glade_path = "ezame.glade"
 else:
 	from ezame.desktop import DE
+	from ezame.ThemedIconChooser import IconChooserDialog
 	glade_path = os.path.join(sys.prefix, "share", "ezame", "ezame.glade")
 LOCALE_DOMAIN = "ezame"
 gettext.textdomain(LOCALE_DOMAIN)
@@ -238,6 +243,15 @@ class Ezame(object):
 			obj.entry.grab_focus()
 			obj.entry.set_text(dialog.get_filename())
 		dialog.destroy()
+
+	def on_BIconChooser_clicked(self, obj):
+		dialog = IconChooserDialog()
+		dialog.set_transient_for(self.window)
+		selection = dialog.run()
+		dialog.destroy()
+		if selection:
+			obj.entry.grab_focus()
+			obj.entry.set_text(selection)
 
 	def on_categtreecellrenderertoggle_toggled(self, cell, path, model, *ignore):
 		model[model.get_iter(path)][0] = not model[model.get_iter(path)][0]
@@ -1174,9 +1188,12 @@ class Ezame(object):
 			self.Bpath.action = Gtk.FileChooserAction.SELECT_FOLDER
 			self.Bpath.entry = self.Epath
 			self.Bicon = builder.get_object("Bicon")
-			self.Bicon.msg = _("Choose a icon")
+			self.Bicon.msg = _("Choose an icon file")
 			self.Bicon.action = Gtk.FileChooserAction.OPEN
 			self.Bicon.entry = self.Eicon
+			self.Bicon1 = builder.get_object("Bicon1")
+			self.Bicon1.msg = _("Choose a system icon")
+			self.Bicon1.entry = self.Eicon
 			self.Ecomment = builder.get_object("Ecomment")
 			self.Ecomment.key = "Comment"
 			self.Ecomment.locale = "Comment"
@@ -1365,6 +1382,7 @@ class Ezame(object):
 			self.id_Bexec_clicked = self.Bexec.connect("clicked", self.on_BFileChooser_clicked)
 			self.id_Bpath_clicked = self.Bpath.connect("clicked", self.on_BFileChooser_clicked)
 			self.id_Bicon_clicked = self.Bicon.connect("clicked", self.on_BFileChooser_clicked)
+			self.id_Bicon1_clicked = self.Bicon1.connect("clicked", self.on_BIconChooser_clicked)
 			self.id_Btryexec_clicked = self.Btryexec.connect("clicked", self.on_BFileChooser_clicked)
 			self.id_Ronlyshowin_clicked = self.Ronlyshowin.connect("clicked", self.on_Rshowin__clicked)
 			self.id_Rnotshowin_clicked = self.Rnotshowin.connect("clicked", self.on_Rshowin__clicked)

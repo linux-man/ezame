@@ -1,3 +1,9 @@
+ezame (0.7.0-0) focal; urgency=low
+
+  * Icon Chooser Dialog from https://github.com/Tomha/python-gtk-themed-icon-chooser
+
+ -- Caldas Lopes <joao.caldas.lopes@gmail.com>  Mon, 12 Oct 2020 10:12:24 +0100
+
 ezame (0.6.4-1) bionic; urgency=low
 
   * Revert to 0.6.2 behaviour - call pkexec when needed
